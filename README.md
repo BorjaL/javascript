@@ -4,7 +4,7 @@ But there are some dark corners that we just don't know or don't understand pret
 With this examples I want to give some light to those paradigms.
 
 ## Paradigms
-* Function Invocations. All 'this' staff.
+* Function Invocations. All 'this' stuff.
 
 ### Invocations
 * Method invocation
