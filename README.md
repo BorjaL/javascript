@@ -5,9 +5,13 @@ With this examples I want to give some light to those paradigms.
 
 ## Paradigms
 * Function Invocations. All 'this' stuff.
+* Scope. Still when my variables are alive.
 
 ### Invocations
 * Method invocation
 * Function invocation
 * Constructor invocation
 * Apply invocation
+
+### Scope
+* function scope
