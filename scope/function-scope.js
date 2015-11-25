@@ -1,5 +1,5 @@
 /*
-	Javascript have function scope. The variable is visible inside the function. 
+	Javascript has function scope. The variable is visible inside the function. 
 	Even inside an inner function.
 */
 
