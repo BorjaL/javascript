@@ -15,3 +15,4 @@ With this examples I want to give some light to those paradigms.
 
 ### Scope
 * function scope
+* Closure
