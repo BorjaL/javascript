@@ -6,26 +6,35 @@
 	a workaround have to be done. It is to create a variable and then asign 'this' object to it.
 */
 
+var outFunction = function(){
+	return this.balance;
+}
+
 var myBankAccount = {
 	balance: 0,
 	deposit: function (money_in) {
 		this.balance += typeof money_in === 'number' ? money_in : 1;
 	},
-	show_balance: function() {
+	show_balance_outter_function: function() {
 
-		var that = this; // Ugly AF
+		return outFunction();
+	},
+	show_balance_inner_function: function() {
 
-		var show_in_console = function (){
-			console.log(this.balance); //undifined
-			console.log(that.balance);
-		}
+		var return_balance = function (){
+			return this.balance;
+		};
 
-		show_in_console();
+		return return_balance();
+	},
+	show_balance_inner_function_workaround: function() {
+
+		var return_balance = function (that){
+			return that.balance;
+		}(this);
+
+		return return_balance;
 	}
 }
 
-myBankAccount.deposit();
-myBankAccount.show_balance();
-
-myBankAccount.deposit(4);
-myBankAccount.show_balance();
+module.exports = myBankAccount;
