@@ -18,32 +18,23 @@ var myBankAccount = (function (){
 			balance += typeof money_in === 'number' ? money_in : 1;
 		},
 		show_balance: function() {
-			console.log(balance);
+			return balance;
 		}
 	};
 }());
 
-console.log("Example 1");
-myBankAccount.deposit();
-myBankAccount.show_balance();
-myBankAccount.deposit(2);
-myBankAccount.show_balance();
+module.exports.myBankAccount = myBankAccount;
 
 
-var bankAccount = function (balance){
+var bankAccountParameters = function (balance){
 	return {
 		deposit: function (money_in) {
 			balance += typeof money_in === 'number' ? money_in : 1;
 		},
 		show_balance: function() {
-			console.log(balance);
+			return balance;
 		}
 	};
 }
 
-console.log("Example 2");
-var myOtherBankAccount = bankAccount(100);
-myOtherBankAccount.deposit();
-myOtherBankAccount.show_balance();
-myOtherBankAccount.deposit(200);
-myOtherBankAccount.show_balance();
+module.exports.bankAccountParameters = bankAccountParameters;
