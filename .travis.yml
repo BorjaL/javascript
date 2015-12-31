@@ -5,4 +5,4 @@ before_script:
     - "npm i -g jasmine-node"
 
 after_script:
-	- "jasmine-node ."
+    - "jasmine-node ."
