@@ -10,11 +10,9 @@ BankAccount.prototype.deposit = function (money_in) {
 }
 
 BankAccount.prototype.show_balance = function () {
-	console.log(this.balance);
+	return this.balance;
 }
 
-var fake_balance = {
-	balance: 1000000
-}
 
-BankAccount.prototype.show_balance.apply(fake_balance);
+
+module.exports = BankAccount;
