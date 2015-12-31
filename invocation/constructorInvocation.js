@@ -11,13 +11,7 @@ BankAccount.prototype.deposit = function (money_in) {
 }
 
 BankAccount.prototype.show_balance = function () {
-	console.log(this.balance);
+	return this.balance;
 }
 
-var myBankAccount = new BankAccount(5);
-myBankAccount.deposit();
-myBankAccount.show_balance();
-
-var otherBankAccount = new BankAccount();
-otherBankAccount.deposit(4);
-otherBankAccount.show_balance();
+module.exports = BankAccount;
