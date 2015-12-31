@@ -3,34 +3,18 @@
 	Even inside an inner function.
 */
 
-var foo = function (){
-	var a = 3, b = 5;
+var function_scope = function (param1, param2){
+	var a = param1, b = param2;
 
-	console.log("Just declared a: " + a);
-	console.log("Just declared b: " + b);
-	//console.log(c); undefined
-
-	var bar = function () {
-		var b = 7, c =11;
-
-		console.log("Inner function a: " + a);
-		console.log("Inner function b: " + b);
-		console.log("Inner function c: " + c);
+	var inner_function = function () {
+		var b = 10, c =5;
 
 		a += b + c;
-
-		console.log("After operations inner function a: " + a);
-		console.log("After operations inner function b: " + b);
-		console.log("After operations inner function c: " + c);
 	};
+	
+	inner_function();
 
-	bar();
-
-	console.log("At the end of the function a: " + a);
-	console.log("At the end of the function b: " + b);
-	//console.log(c); undefined
+	return a + b;
 }
 
-foo();
-
-//console.log(a); undefined
+module.exports = function_scope;
