@@ -1,0 +1,13 @@
+{
+  "name": "Javascript examples",
+  "version": "0.0.1",
+  "description": "Explanations of different javascript paradigms",
+  "private": true,
+  "scripts": {
+    "test": "jasmine-node ."
+  },
+  "author": {
+    "name": "Borja Fernandez",
+    "email": "borja.fpillado@gmail.com"
+  }
+}
